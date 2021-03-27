@@ -8,6 +8,8 @@ new Vue({
         age: 25,
         x: 0,
         y: 0,
+        formName: "",
+        formAge: "",
     },
     methods: {
         greet: function(time) {
@@ -25,6 +27,10 @@ new Vue({
         updateXY: function(event){
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+
+        handleChange: function(event){
+            this[event.target.name] = event.target.value;
         }
     }
 });

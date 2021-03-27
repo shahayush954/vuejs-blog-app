@@ -53,6 +53,17 @@
                 {{ x }}, {{ y }}
             </div>
         </div>
+
+        <div>
+            <h3>Keyboard Events</h3>
+            <label>Name: {{ formName }}</label>
+            <br />
+            <input type="text" name="formName" v-on:keyup="handleChange" />
+            <br />
+            <label>Age: {{ formAge }}</label>
+            <br />
+            <input type="text" name="formAge" v-on:keyup="handleChange" />
+        </div>
     </div>
     
     <script src="App.js"></script>
