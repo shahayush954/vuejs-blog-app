@@ -75,6 +75,17 @@
             <br />
             <input type="text" name="formAge" v-model="formAge" />
         </div>
+
+        <div>
+            <h3>Computed Properties</h3>
+            <button v-on:click="a++">Add to A</button>
+            <button v-on:click="b++">Add to B</button>
+            <p>A: {{ a }}</p>
+            <p>B: {{ b }}</p>
+            <p>Age + A = {{ addA }}</p>
+            <p>Age + B = {{ addB }}</p>
+        </div>
+        
     </div>
     
     <script src="App.js"></script>

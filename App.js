@@ -10,7 +10,11 @@ new Vue({
         y: 0,
         formName: "",
         formAge: "",
+        a: 0,
+        b: 0,
+        computedAge: 20,
     },
+
     methods: {
         greet: function(time) {
             return "Good " + time + " " + this.name;
@@ -31,6 +35,16 @@ new Vue({
 
         handleChange: function(event){
             this[event.target.name] = event.target.value;
+        },
+    },
+
+    computed: {
+        addA: function (){
+            return this.a + this.computedAge;
+        },
+
+        addB: function (){
+            return this.b + this.computedAge;
         }
     }
 });
