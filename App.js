@@ -13,6 +13,9 @@ new Vue({
         a: 0,
         b: 0,
         computedAge: 20,
+        available: false,
+        nearby: false,
+        
     },
 
     methods: {
@@ -45,6 +48,13 @@ new Vue({
 
         addB: function (){
             return this.b + this.computedAge;
+        },
+
+        computedClasses: function() {
+            return {
+                available: this.available,
+                nearby: this.nearby,
+            }
         }
     }
 });
