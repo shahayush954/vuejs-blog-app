@@ -64,6 +64,17 @@
             <br />
             <input type="text" name="formAge" v-on:keyup="handleChange" />
         </div>
+
+        <div>
+            <h3>Two way Data Binding</h3>
+            <label>Name: {{ formName }}</label>
+            <br />
+            <input type="text" name="formName" v-model="formName" />
+            <br />
+            <label>Age: {{ formAge }}</label>
+            <br />
+            <input type="text" name="formAge" v-model="formAge" />
+        </div>
     </div>
     
     <script src="App.js"></script>
