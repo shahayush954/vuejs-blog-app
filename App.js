@@ -15,6 +15,8 @@ new Vue({
         computedAge: 20,
         available: false,
         nearby: false,
+        error: false,
+        success: false,
         
     },
 

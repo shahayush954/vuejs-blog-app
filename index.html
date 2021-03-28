@@ -100,6 +100,18 @@
                 <span>Shah</span>
             </div>
         </div>
+
+        <div>
+            <h4>Conditionals</h4>
+            <button v-on:click="error = !error">Toggle Error</button>
+            <button v-on:click="success = !success">Toggle Succes</button>
+            <p v-if="error">There has been an error</p>
+            <p v-else-if="success">Success!!! :)</p>
+
+            <p v-show="error">There has been an error</p>
+            <p v-show="success">Success!!! :)</p>
+        </div>
+
     </div>
     
     <script src="App.js"></script>
