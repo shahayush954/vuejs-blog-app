@@ -17,7 +17,20 @@ new Vue({
         nearby: false,
         error: false,
         success: false,
-        
+        employeeNames: [
+            "Vasili Ivanowich",
+            "Nikolai Belinski",
+            "John Davis",
+            "Victor Reznov",
+            "Lev Kravchenko"
+        ],
+        employees:[
+            {name: "Vasili Ivanowich", age:30},
+            {name: "Nikolai Belinski", age:30},
+            {name: "John Davis", age:30},
+            {name: "Victor Reznov", age:30},
+            {name: "Lev Kravchenko", age:30},
+        ]
     },
 
     methods: {

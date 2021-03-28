@@ -112,6 +112,31 @@
             <p v-show="success">Success!!! :)</p>
         </div>
 
+        <div>
+            <h4>Looping</h4>
+            <h5>Employee Names</h5>
+            <ul>
+                <li v-for="(employee, index) in employeeNames">{{index}} . {{ employee }}</li>
+            </ul>
+
+            <h5>Employee Names with Age</h5>
+            <ul>
+                <li v-for="(employee, index) in employees">{{index}} . {{employee.name}} -> {{employee.age}}</li>
+            </ul>
+
+            <h5>Employee Names with Age in Templates</h5>
+            <template v-for="(employee, index) in employees">
+                <p>Name: {{employee.name }}</p>
+                <p>Age: {{employee.age}}</p>
+            </template>
+
+            <h5>Employee Names with Age in Templates looping through objects</h5>
+            <template v-for="(employee, index) in employees">
+                <div v-for="(value, key) in employee">
+                    <span>{{key}}: </span><span>{{value}}</span>
+                </div>
+            </template>
+        </div> 
     </div>
     
     <script src="App.js"></script>
