@@ -1,3 +1,16 @@
+Vue.component("Greetings", {
+    template: "<p>Hi there I am a reusable component from {{ name }} <button v-on:click='changeName'>Change Name</button></p>",
+    data: function(){
+        return {
+            name: "Vasili Ivanowich"
+        }
+    },
+    methods: {
+        changeName: function() {
+            this.name = "Nikolai Belinski";
+        }
+    }
+});
 const vue = new Vue({
     el: "#vue-app",
     data: {
@@ -84,7 +97,7 @@ const one = new Vue({
             return "From First Instance"
         }
     }
-})
+});
 
 const two = new Vue({
     el: "#vue-app-2",
@@ -101,4 +114,4 @@ const two = new Vue({
             return "From Second Instance"
         }
     }
-})
+});
