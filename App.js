@@ -1,4 +1,4 @@
-new Vue({
+const vue = new Vue({
     el: "#vue-app",
     data: {
         name: "Ayush",
@@ -73,3 +73,32 @@ new Vue({
         }
     }
 });
+
+const one = new Vue({
+    el: "#vue-app-1",
+    data: {
+        title: "First Instance",
+    },
+    computed:{
+        greet: function() {
+            return "From First Instance"
+        }
+    }
+})
+
+const two = new Vue({
+    el: "#vue-app-2",
+    data: {
+        title: "Second Instance",
+    },
+    methods: {
+        changeTitle: function(){
+            one.title = "Title Changed";
+        }
+    },
+    computed:{
+        greet: function() {
+            return "From Second Instance"
+        }
+    }
+})

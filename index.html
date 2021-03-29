@@ -138,6 +138,16 @@
             </template>
         </div> 
     </div>
+
+    <div id="vue-app-1">
+        <h4>{{ title }}</h4>
+        {{ greet }}
+    </div>
+    <div id="vue-app-2">
+        <h4>{{ title }}</h4>
+        {{ greet }}
+        <button v-on:click="changeTitle">Change Instance One Title</button>
+    </div>
     
     <script src="App.js"></script>
 </body>
