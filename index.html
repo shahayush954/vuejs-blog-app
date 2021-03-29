@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-   <div id="root">
-        {{ name }}
-   </div>
+    <div id="vue-app">
+        <div 
+            id="bag"
+            v-bind:class="{ burst: ended }"    
+        ></div>
+        <div id="bag-health">
+            <div
+                v-bind:style="{ width: health +'%'}"
+            ></div>
+        </div>
+        <div id="controls">
+            <button 
+                v-on:click="punch"
+                v-show="!ended"
+            >Punch</button>
+            <button v-on:click="restart">Restart</button>
+        </div>
+    </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+   <script src="./App.js"></script>
 </body>
 </html>
