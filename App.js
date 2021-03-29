@@ -43,7 +43,8 @@ const vue = new Vue({
             {name: "John Davis", age:30},
             {name: "Victor Reznov", age:30},
             {name: "Lev Kravchenko", age:30},
-        ]
+        ],
+        favouriteFood: "",
     },
 
     methods: {
@@ -67,6 +68,10 @@ const vue = new Vue({
         handleChange: function(event){
             this[event.target.name] = event.target.value;
         },
+
+        readRefs: function(){
+            this.favouriteFood = this.$refs.myInput.value;
+        }
     },
 
     computed: {

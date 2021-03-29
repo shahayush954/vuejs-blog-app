@@ -142,6 +142,13 @@
             <h4>Reusable components</h4>
             <Greetings></Greetings>
         </div>
+
+        <div>
+            <h4>References (Refs)</h4>
+            Enter Favourite Food: <input type="text" ref="myInput"/>
+            <button v-on:click="readRefs">Submit</button>
+            <p>Your Favourite Food: {{ favouriteFood }}</p>
+        </div>
     </div>
 
     <div id="vue-app-1">
